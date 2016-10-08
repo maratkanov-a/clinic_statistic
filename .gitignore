@@ -2,7 +2,6 @@
 node_modules
 *~
 *.pyc
-static
 .grunt
 _SpecRunner.html
 __benchmarks__
@@ -17,8 +16,6 @@ docs/.sass-cache
 docs/js/*
 docs/downloads
 docs/vendor/bundle
-examples/shared/*.js
-examples/**/bundle.js
 test/the-files-to-test.generated.js
 *.log*
 chrome-user-data

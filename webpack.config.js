@@ -1,10 +1,12 @@
 'use strict';
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
-    entry: './js/index',
+    entry: './static/js/index',
 
     output: {
-        filename: "./build.js",
+        filename: "./build/js/build.js",
         library: "home"
     },
 
@@ -20,9 +22,17 @@ module.exports = {
         loaders: [
             {
                 test: "/\.js$",
-                loader: 'babel'
+                loader: "babel"
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('./build/css/bundle.css')
+    ]
+
 
 };

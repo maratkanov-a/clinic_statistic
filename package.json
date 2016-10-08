@@ -11,5 +11,10 @@
     "webpack"
   ],
   "author": "a.maratkanov, a.sukhanov",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "0.25.0",
+    "style-loader": "0.13.1",
+    "extract-text-webpack-plugin": "1.0.1"
+  }
 }
