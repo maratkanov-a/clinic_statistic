@@ -6,7 +6,7 @@ import Login from './components/login'
 import Test from './components/test'
 import Statistic from './components/test'
 
-var App = React.createClass({
+class App extends React.Component {
     render() {
         return (
             <div className="container">
@@ -20,7 +20,7 @@ var App = React.createClass({
             </div>
         );
     }
-});
+}
 
 ReactDOM.render(
     <Router history={browserHistory}>
