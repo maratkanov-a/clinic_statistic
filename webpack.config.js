@@ -1,9 +1,15 @@
 'use strict';
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-    entry: './static/js/index',
+    devServer: {
+        inline: true,
+        port: 3010
+    },
+
+    entry: './static/js/index.js',
 
     output: {
         filename: "./build/js/build.js",
@@ -18,11 +24,19 @@ module.exports = {
 
     devtool: "cheap-source-map",
 
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     module: {
         loaders: [
             {
-                test: "/\.js$",
-                loader: "babel"
+                test: /\.jsx?$/,
+                loader: 'babel',
+                exclude: /node_modules/,
+                query: {
+                    cacheDirectory: true,
+                    presets: ['react', 'es2015']
+                }
             },
             {
                 test: /\.css$/,
@@ -30,8 +44,17 @@ module.exports = {
             }
         ]
     },
+
     plugins: [
-        new ExtractTextPlugin('./build/css/bundle.css')
+        new ExtractTextPlugin('./build/css/bundle.css'),
+        // uncomment for production
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: { warnings: false },
+        //     mangle: true,
+        //     sourcemap: false,
+        //     beautify: false,
+        //     dead_code: true
+        // })
     ]
 
 

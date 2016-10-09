@@ -53,5 +53,5 @@ ReactDOM.render(
             </Route>
         </Route>
     </Router>,
-    document.getElementById("body")
+    document.getElementById("app")
 );
