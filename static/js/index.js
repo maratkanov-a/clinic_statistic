@@ -1,33 +1,10 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, Link, browserHistory } from "react-router"
-
-var Home = React.createClass({
-    render() {
-        return (
-            <h2>Home</h2>
-        )
-    }
-});
-
-var About = React.createClass({
-    render() {
-        return (
-            <div>
-                <h2>About</h2>
-                {this.props.children}
-            </div>
-        );
-    }
-});
-
-var Nested = React.createClass({
-    render() {
-        return (
-            <p>Nested content.</p>
-        )
-    }
-});
+import Home from './components/main'
+import Login from './components/login'
+import Test from './components/test'
+import Statistic from './components/test'
 
 var App = React.createClass({
     render() {
@@ -35,8 +12,9 @@ var App = React.createClass({
             <div className="container">
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/about/nested">About &raquo; Nested</Link></li>
+                    <li><Link to="/login">login</Link></li>
+                    <li><Link to="/test">test</Link></li>
+                    <li><Link to="/statistic">statistic</Link></li>
                 </ul>
                 {this.props.children}
             </div>
@@ -48,9 +26,9 @@ ReactDOM.render(
     <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
-            <Route path="about" component={About}>
-                <Route path="nested" component={Nested} />
-            </Route>
+            <Route path="login" component={Login} />
+            <Route path="/test" component={Test} />
+            <Route path="/statistic/:projectName" component={Statistic} />
         </Route>
     </Router>,
     document.getElementById("body")
