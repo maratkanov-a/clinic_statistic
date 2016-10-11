@@ -6,7 +6,7 @@ require('./../../../css/header/header.css');
 export default class Header extends React.Component {
     render() {
         return (
-            <div className="header">
+            <header className="header">
                 <div className="container">
                     <div className="logo three columns">
                         НИИ статистика
@@ -15,12 +15,10 @@ export default class Header extends React.Component {
                         элементы
                     </div>
                     <div className="login two columns">
-                        <button className="button">
-                            <Link to="/login">Войти</Link>
-                        </button>
+                        <Link className="button" to="/login">Войти</Link>
                     </div>
                 </div>
-            </div>
+            </header>
         )
     }
 }

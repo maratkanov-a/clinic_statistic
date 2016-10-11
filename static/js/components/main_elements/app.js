@@ -7,6 +7,8 @@ import Footer from './footer'
 // main styles
 require('./../../../css/lib/normalize.css');
 require('./../../../css/lib/skeleton.css');
+require('./../../../css/main.css');
+
 
 // bam styles
 require('./../../../css/content/content.css');
@@ -23,9 +25,9 @@ export default class App extends React.Component {
                 {/*<li><Link to="/test">test</Link></li>*/}
                 {/*<li><Link to="/statistic">statistic</Link></li>*/}
                 {/*</ul>*/}
-                <div className="content">
+                <main className="content">
                     {this.props.children}
-                </div>
+                </main>
                 <Footer/>
             </div>
         );
