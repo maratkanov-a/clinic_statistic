@@ -1,6 +1,6 @@
 import React from "react";
 
-require('./../../css/content/__home/home.css');
+require('./../../../css/content/__home/home.css');
 
 class Home extends React.Component {
     render() {
