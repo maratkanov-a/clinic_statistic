@@ -12,7 +12,8 @@ export default class Header extends React.Component {
                         <Link to="/">НИИ статистика</Link>
                     </div>
                     <div className="elements seven columns">
-                        элементы
+                        {/* TODO: ссылка на статическую страницу, переделать */}
+                        <Link to="/statistic/1">Статистика</Link>
                     </div>
                     <div className="login two columns">
                         <Link className="button" to="/login">Войти</Link>
