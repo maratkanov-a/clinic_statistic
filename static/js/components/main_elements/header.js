@@ -9,7 +9,7 @@ export default class Header extends React.Component {
             <header className="header">
                 <div className="container">
                     <div className="logo three columns">
-                        НИИ статистика
+                        <Link to="/">НИИ статистика</Link>
                     </div>
                     <div className="elements seven columns">
                         элементы

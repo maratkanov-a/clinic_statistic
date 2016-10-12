@@ -19,16 +19,10 @@ export default class App extends React.Component {
         return (
             <div>
                 <Header/>
-                {/*<ul>*/}
-                {/*<li><Link to="/">Home</Link></li>*/}
-                {/*<li><Link to="/login">login</Link></li>*/}
-                {/*<li><Link to="/test">test</Link></li>*/}
-                {/*<li><Link to="/statistic">statistic</Link></li>*/}
-                {/*</ul>*/}
                 <main className="content">
                     {this.props.children}
                 </main>
-                <Footer/>
+                {/*<Footer/>*/}
             </div>
         );
     }
