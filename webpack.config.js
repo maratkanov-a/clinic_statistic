@@ -47,14 +47,13 @@ module.exports = {
 
     plugins: [
         new ExtractTextPlugin('./build/css/bundle.css'),
-        // uncomment for production
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: { warnings: false },
-        //     mangle: true,
-        //     sourcemap: false,
-        //     beautify: false,
-        //     dead_code: true
-        // })
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false },
+            mangle: true,
+            sourcemap: false,
+            beautify: false,
+            dead_code: true
+        })
     ]
 
 
