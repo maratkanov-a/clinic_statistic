@@ -1,7 +1,7 @@
 {
   "name": "clinic_statistic",
   "version": "1.0.0",
-  "description": "statistic hub",
+  "description": "benowate hub",
   "main": "index.js",
   "scripts": {
     "server": "node server.js",
@@ -11,7 +11,7 @@
     "react",
     "webpack"
   ],
-  "author": "a.maratkanov, a.sukhanov",
+  "author": "a.maratkanov",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.11.4",
@@ -25,9 +25,17 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "1.0.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "jquery": "^3.2.1",
+    "react": "^15.6.2",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-shallow-compare": "^15.6.0",
+    "react-dom": "^15.6.2",
+    "react-dom-factories": "^1.0.0",
     "react-router": "^2.6.1",
-    "style-loader": "0.13.1"
+    "react-selectize": "^3.0.1",
+    "react-transition-group": "^1.1.2",
+    "style-loader": "0.13.1",
+    "sweetalert": "latest",
+    "webpack": "^1.9.11"
   }
 }

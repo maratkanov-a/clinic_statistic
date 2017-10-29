@@ -8,8 +8,6 @@ import App from './components/main_elements/app'
 // pages
 import Home from './components/pages/home'
 import Login from './components/pages/login'
-import Test from './components/pages/test'
-import Statistic from './components/pages/statistic'
 import NotFound from './components/pages/not_found'
 
 
@@ -20,10 +18,8 @@ ReactDOM.render(
             <IndexRoute component={Home} />
 
             <Route path="login" component={Login} />
-            <Route path="test" component={Test} />
-            <Route path="statistic/:projectName" component={Statistic} />
-
             <Route path='*' component={NotFound} />
+
         </Route>
     </Router>,
     document.getElementById("body")
